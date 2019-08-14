@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -f 20170821_oQARFMn6Di4.info.json.vo.mp4 
+
+${HOME}/bin/youtube-dl --ignore-errors --restrict-filenames   \
+    -f 160 \
+    -o 20170821_oQARFMn6Di4.info.json.vo.mp4  \
+    'https://www.youtube.com/watch?v=oQARFMn6Di4'

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rm -f 20170821_oQARFMn6Di4.info.json.mp4 
+/usr/bin/ffmpeg \
+    -i 20170821_oQARFMn6Di4.info.json.vo.mp4  \
+    -i 20170821_oQARFMn6Di4.info.json.25k.mp4        \
+    -map 0:v:0 -map 1:a:0      \
+    -c:a copy \
+    -b:v 64000   \
+    20170821_oQARFMn6Di4.info.json.mp4 \
+    && (echo 'ok     :gen 20170821_oQARFMn6Di4.info.json.mp4' >> result.txt )\
+    || (echo 'failed :gen 20170821_oQARFMn6Di4.info.json.mp4' >> result.txt )
